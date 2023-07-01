@@ -54,22 +54,25 @@ class SecondFragment : Fragment() {
             binding.buttonSecond.text = "ubah"
             binding.nameEditText.setText(restaurant?.name)
             binding.addressEditText.setText(restaurant?.address)
+            binding.pemilikEditText.setText(restaurant?.pemilik)
         }
         val name = binding.nameEditText.text
         val address = binding.addressEditText.text
+        val pemilik = binding.pemilikEditText.text
         binding.buttonSecond.setOnClickListener {
             if (name.isEmpty()) {
                 Toast.makeText(context, "Nama tidak boleh kosong", Toast.LENGTH_SHORT).show()
             } else if (address.isEmpty()){
                     Toast.makeText(context, "Alamat tidak boleh kosong", Toast.LENGTH_SHORT).show()
-
+            } else if (pemilik.isEmpty()){
+                Toast.makeText(context, "Nama Pemilik tidak boleh kosong", Toast.LENGTH_SHORT).show()
             } else {
                 if ( restaurant == null){
-                    val restaurant = Restaurant (0, name.toString(), address.toString())
+                    val restaurant = Restaurant (0, name.toString(), address.toString(), pemilik.toString())
                     RestaurantViewModel.insert(restaurant)
 
                 } else{
-                    val restaurant = Restaurant (restaurant?.id!!, name.toString(), address.toString())
+                    val restaurant = Restaurant (restaurant?.id!!, name.toString(), address.toString(), pemilik.toString())
                     RestaurantViewModel.update(restaurant)
                 }
                 findNavController().popBackStack()
