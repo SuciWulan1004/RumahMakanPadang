@@ -5,6 +5,19 @@ import com.example.myapplication.model.Restaurant
 import kotlinx.coroutines.flow.Flow
 
 class Restaurantripository {
+    val allRestaurant: Any
+
+    fun deleteRestaurant(restaurant: Restaurant) {
+
+    }
+
+    fun insertRestaurant(restaurant: Restaurant) {
+
+    }
+
+    fun updateRestaurant(restaurant: Restaurant) {
+
+    }
 }
 class TireRepository(private val RestaurantDao: RestaurantDao) {
     val allTires: Flow<List<Restaurant>> = RestaurantDao.getAllRestaurant()
