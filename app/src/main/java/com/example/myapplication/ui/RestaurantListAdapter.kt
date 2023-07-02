@@ -30,11 +30,11 @@ class RestaurantListAdapter(
     class RestaurantViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         private val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         private val addressTextView: TextView = itemView.findViewById(R.id.addressTextView)
-        private val pemilikTextView: TextView = itemView.findViewById(R.id.pemilikEditText)
+        private val ownerTextView: TextView = itemView.findViewById(R.id.ownerEditText)
         fun bind(restaurant: Restaurant?) {
             nameTextView.text = restaurant?.name
             addressTextView.text = restaurant?.address
-            pemilikTextView.text = restaurant?.pemilik
+            ownerTextView.text = restaurant?.owner
         }
 
         companion object {

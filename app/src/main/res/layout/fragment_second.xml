@@ -44,9 +44,9 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="159dp"
-            android:layout_height="48dp"
-            android:text="Rumah Makan Padang"
+            android:layout_width="206dp"
+            android:layout_height="58dp"
+            android:text="Nama Rumah Makan Padang"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -90,7 +90,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/pemilikEditText"
+            android:id="@+id/ownerEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"

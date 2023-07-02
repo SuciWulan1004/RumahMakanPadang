@@ -13,5 +13,5 @@ data class Restaurant (
     val id: Int = 0,
     val name: String,
     val address: String,
-    val pemilik: String
+    val owner: String
 ) : Parcelable
