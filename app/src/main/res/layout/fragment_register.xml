@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.RegisterFragment"
+        android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/txt_1r"
+        android:layout_width="172dp"
+        android:layout_height="93dp"
+        android:fontFamily="bold"
+        android:paddingTop="65dp"
+        android:text="REGISTRATION"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+            android:id="@+id/img_2r"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_1r" />
+
+        <TextView
+            android:id="@+id/txt_3r"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/img_2r"
+            android:hint="Username"
+            android:paddingLeft="15sp"
+            android:paddingTop="11dp"
+            android:textSize="15sp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintWidth="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textEmailAddress"/>
+        <TextView
+            android:id="@+id/txt_4r"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_3r"
+            android:hint="Password"
+            android:paddingLeft="15sp"
+            android:paddingTop="11dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"/>
+
+        <TextView
+            android:id="@+id/txt_5r"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_4r"
+            android:hint="Confirm Password"
+            android:paddingLeft="15sp"
+            android:paddingTop="11dp"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintWidth="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/btn_1r"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_5r"
+            android:layout_marginTop="75dp"
+            android:text="Register"
+            app:layout_constraintWidth="300dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:onClick="onClickButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

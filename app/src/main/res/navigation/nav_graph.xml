@@ -4,7 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/FirstFragment">
+    <fragment
+        android:id="@+id/SignInFragment"
+        android:name="com.example.myapplication.ui.SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
 
+        <action
+            android:id="@+id/action_SignInFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SignInFragment_to_RegisterFragment"
+            app:destination="@+id/RegisterFragment"/>
+
+        <argument
+            android:name="Get Started"
+            app:argType="com.android.tokobuku.model.Book"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.example.myapplication.ui.RegisterFragment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_RegisterFragment_to_SignInFragment"
+            app:destination="@id/SignInFragment" />
+
+        <argument
+            android:name="Get Started"
+            app:argType="com.android.tokobuku.model.Book"
+            app:nullable="true"/>
+    </fragment>
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.myapplication.ui.FirstFragment"
